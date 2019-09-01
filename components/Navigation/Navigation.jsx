@@ -13,11 +13,8 @@ const StyledLink = styled(NavLink)`
   margin-right: ${({ theme }) => theme.spacing.half};
 `
 
-const Navigation = () => (
+const Navigation = ({children}) => (
   <>
-    <Head>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
     <StyledNavigation>
       <StyledLink href="/">
         Home
@@ -29,6 +26,7 @@ const Navigation = () => (
         Class
       </StyledLink>
     </StyledNavigation>
+    {children}
   </>
 )
 

@@ -5,9 +5,9 @@ const Title = styled.h1`
 `;
 
 const Index = () => (
-  <div>
+  <>
     <Title>Hello, World!</Title>
-  </div>
+  </>
 )
 
 export default Index
