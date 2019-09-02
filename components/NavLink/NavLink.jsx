@@ -10,11 +10,14 @@ const StyledLink = styled.a`
 
   :hover,
   :active {
-    padding-bottom: ${({ theme }) => theme.spacing.quater};
+
     cursor: pointer;
-    border-bottom-width: ${({ theme }) => theme.spacing.quater};
-    border-bottom-style: solid;
-    border-bottom-color: ${({ theme }) => theme.color.accent};
+    color: ${({theme}) => theme.color.primary};
+    background: linear-gradient(90deg, ${({theme}) => theme.color.midground} 0%, ${({theme}) => theme.color.offMid} 20%, ${({theme}) => theme.color.offMid} 80%, ${({theme}) => theme.color.midground} 100%);
+  }
+
+  :focus {
+    outline: transparent;
   }
 `
 

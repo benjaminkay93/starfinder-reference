@@ -5,26 +5,23 @@ import NavLink from '../NavLink'
 
 const StyledNavigation = styled.nav`
   display: flex;
-  border-bottom: 1px solid;
-  background-color: ${({ theme }) => theme.color.accentContrast};
-`
-
-const StyledLink = styled(NavLink)`
-  margin-right: ${({ theme }) => theme.spacing.half};
+  color: ${({ theme }) => theme.color.midgroundText};
+  background-color: ${({ theme }) => theme.color.midground};
+  border-bottom: 4px solid ${({theme}) => theme.color.border};
 `
 
 const Navigation = ({children}) => (
   <>
     <StyledNavigation>
-      <StyledLink href="/">
+      <NavLink href="/">
         Home
-      </StyledLink>
-      <StyledLink href="/race">
+      </NavLink>
+      <NavLink href="/race">
         Race
-      </StyledLink>
-      <StyledLink href="/class">
+      </NavLink>
+      <NavLink href="/class">
         Class
-      </StyledLink>
+      </NavLink>
     </StyledNavigation>
     {children}
   </>

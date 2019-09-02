@@ -8,7 +8,7 @@ class AppWrapper extends App {
   render () {
     const { Component, pageProps } = this.props
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme({mode: 'light'})}>
         <Navigation>
           <Component {...pageProps} />
         </Navigation>

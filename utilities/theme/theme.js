@@ -1,6 +1,25 @@
 import pxToRem from './px-to-rem'
 
-const theme = {
+const color = {
+  light: {
+    background: '#FFFFFF',
+    primary: 'rgb(0,24,57)',
+  },
+  dark: {
+    background: 'rgb(0,24,57)',
+    primary: '#FFFFFF',
+  },
+  common: {
+    accent: 'rgb(17,29,62)',
+    border: 'rgb(57,173,227)',
+    midground: 'rgb(35,86,131)',
+    midgroundText: '#FFFFFF',
+    offMid: 'rgb(173,222,222)',
+    offMidText: 'rgb(0,24,57)',
+  }
+}
+
+const theme = ({ mode }) => ({
   spacing: {
     base: pxToRem(12),
     half: pxToRem(6),
@@ -9,11 +28,9 @@ const theme = {
     double: pxToRem(24)
   },
   color: {
-    background: '#FFFFFF',
-    primary: 'rgb(17,29,62)',
-    accent: 'rgb(17,29,62)',
-    accentContrast: 'rgb(239,155,20)'
+    ...color.common,
+    ...color[mode]
   }
-}
+})
 
 export default theme
