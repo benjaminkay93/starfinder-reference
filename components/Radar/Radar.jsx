@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Got from a CodePen then altered to fit our usage https://codepen.io/robert-peri/pen/maJpgz
+
 const StlyedRadarScan = styled.span`
   list-style: none;
   position: absolute;
