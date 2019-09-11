@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-// Got from a CodePen then altered to fit our usage https://codepen.io/robert-peri/pen/maJpgz
+// Got Radar circle from a CodePen then altered to fit our usage https://codepen.io/robert-peri/pen/maJpgz
+// Got outer from https://codepen.io/hugo/pen/ypcqb
 
-const StlyedRadarScan = styled.span`
+const RadarScan = styled.span`
   list-style: none;
   position: absolute;
   top: 50%;
@@ -24,7 +25,7 @@ const StlyedRadarScan = styled.span`
   }
 `
 
-const StyledRadar = styled.span`
+const Circle = styled.span`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -38,10 +39,75 @@ const StyledRadar = styled.span`
   transform: translate(-50%,-50%);
 `
 
+const OuterCircle = styled.div`
+  animation: circle1 4s linear infinite; 
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #00a4a2;
+  box-shadow:0 0 0 2px black, 0 0 0 6px  #00fffc;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -250px;
+  overflow: hidden;
+  opacity: 1;
+   z-index: -3; 
+
+  @keyframes circleSpin {
+    0% {
+      @include rotate (0deg);
+    }  
+    100% {
+      @include rotate (360deg);
+    }
+  }
+`
+
+const InnerCircle = styled.div`
+  box-sizing: border-box;
+  background-size: cover;
+  font-size: 10px;
+  overflow: hidden;
+  text-align: center;
+
+  background: #000; 
+  border-radius: 50%;
+  border: 36px solid #00fffc; 
+  height: 460px; 
+  width: 460px; 
+  margin: 10px;
+  
+  
+  :before {
+    content: ' ';
+    width: 240px;
+    height: 480px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  :after {
+    content: ' ';
+    width: 480px;
+    height: 240px; 
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0; 
+  }
+ `
+
 const Radar = () => (
-  <StyledRadar>
-    <StlyedRadarScan/>
-  </StyledRadar>
-)
+  <>
+  <OuterCircle>
+    <InnerCircle />
+  </OuterCircle>
+    {/* <Circle>
+      <RadarScan/>
+    </Circle> */}
+</>)
 
 export default Radar
