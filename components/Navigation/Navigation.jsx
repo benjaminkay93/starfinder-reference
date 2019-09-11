@@ -22,7 +22,7 @@ const Navigation = ({children}) => (
       <NavLink href="/class">
         Class
       </NavLink>
-      <NavLink href="/ship">
+      <NavLink href="/ships">
         Ships
       </NavLink>
     </StyledNavigation>

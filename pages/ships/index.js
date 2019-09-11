@@ -13,7 +13,7 @@ const Index = ({data}) => {
   return (
     <>
       {data.map((item, key) => (
-        <Link key={key} href={`/ship/${item}`}>
+        <Link key={key} href={`/ships/${item}`}>
           {item}
         </Link>
       ))}
@@ -22,7 +22,7 @@ const Index = ({data}) => {
 };
 
 Index.getInitialProps = async ({ query: id }) => {
-  const res = await fetch(`http://localhost:3000/api/ship`)
+  const res = await fetch(`http://localhost:3000/api/ships`)
   const data = await res.json()
 
   return {data}

@@ -1,7 +1,36 @@
 let data = {
   stub: {
-    name: 'someName',
-
+    shipName: 'Kintaro',
+    make: 'Racing Yacht',
+    frame: 'Explorer',
+    speed: 12,
+    drift: 3,
+    pcu: 300,
+    tier: 9,
+    forward: {
+      shields: {
+        max: 90,
+        damage: 0
+      }
+    },
+    port: {
+      shields: {
+        max: 90,
+        damage: 0
+      }
+    },
+    starboard: {
+      shields: {
+        max: 90,
+        damage: 0
+      }
+    },
+    aft: {
+      shields: {
+        max: 90,
+        damage: 0
+      }
+    }
   }
 }
 

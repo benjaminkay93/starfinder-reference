@@ -20,7 +20,7 @@ const Index = ({errorCode, ship}) => {
 };
 
 Index.getInitialProps = async ({ query: id }) => {
-  const res = await fetch(`http://localhost:3000/api/ship?id=${id.id}`)
+  const res = await fetch(`http://localhost:3000/api/ships?id=${id.id}`)
   const errorCode = res.status > 200 ? res.status : false
   const json = await res.json()
 
