@@ -17,7 +17,7 @@ const Index = ({ errorCode, initialShip, id }) => {
   }
 
   const [ship, setShip] = useState(initialShip)
-  backgroundPoll({ hook: setShip, args: { query: id }, fetchFunction: fetchData, responseKey: 'initialShip', timeout: 5 * 1000 })
+  backgroundPoll({ hook: setShip, args: { query: id }, fetchFunction: fetchData, responseKey: 'initialShip', timeout: 30 * 1000 });
 
   return (
     <>
