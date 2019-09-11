@@ -12,8 +12,8 @@ const StyledLink = styled.a`
   :active {
 
     cursor: pointer;
-    color: ${({theme}) => theme.color.primary};
-    background: linear-gradient(90deg, ${({theme}) => theme.color.midground} 0%, ${({theme}) => theme.color.offMid} 20%, ${({theme}) => theme.color.offMid} 80%, ${({theme}) => theme.color.midground} 100%);
+    color: ${({ theme }) => theme.color.primary};
+    background: linear-gradient(90deg, ${({ theme }) => theme.color.midground} 0%, ${({ theme }) => theme.color.offMid} 20%, ${({ theme }) => theme.color.offMid} 80%, ${({ theme }) => theme.color.midground} 100%);
   }
 
   :focus {

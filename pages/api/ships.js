@@ -34,7 +34,7 @@ let data = {
   }
 }
 
-const handleGet = ({res, id}) => {
+const handleGet = ({ res, id }) => {
   if (data[id]) {
     res.json(data[id])
   } else {
@@ -58,17 +58,17 @@ const handle = async (req, res) => {
   const id = req.query.id
   if (!id) {
     res.status(200).json(Object.keys(data))
-    return undefined;
+    return undefined
   }
   console.log(id)
-  switch(req.method) {
+  switch (req.method) {
     case 'GET':
       handleGet({ res, id })
-      break;
+      break
     case 'POST':
       handlePost({ req, res, id })
-      break;
-     default:
+      break
+    default:
       res.status(403).end()
   }
 }

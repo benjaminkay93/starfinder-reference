@@ -1,3 +1,5 @@
-import backgroundFetch from './background-fetch'
+import backgroundPoll from './background-poll'
 
-export default backgroundFetch
+export {
+  backgroundPoll
+}

@@ -1,4 +1,5 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import React from 'react'
+import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components'
 import globalCss from 'utilities/global-css'
 
@@ -27,8 +28,8 @@ export default class MyDocument extends Document {
       sheet.seal()
     }
   }
- 
-  render() {
+
+  render () {
     const GlobalCss = createGlobalStyle`
       ${globalCss}
     `
@@ -44,6 +45,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }

@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Error from 'next/error'
 import fetch from 'isomorphic-unfetch'
-import styled from 'styled-components';
-import backgroundFetch from 'utilities/background-fetch'
-
-const Title = styled.h1`
-  color: red;
-`;
+import { backgroundPoll } from 'utilities/background-fetch'
 
 const fetchData = async ({ query: id }) => {
   const res = await fetch(`http://localhost:3000/api/ships?id=${id.id}`)
@@ -16,30 +11,20 @@ const fetchData = async ({ query: id }) => {
   return { errorCode, initialShip: data, id }
 }
 
-const Index = ({errorCode, initialShip, id}) => {
+const Index = ({ errorCode, initialShip, id }) => {
   if (errorCode) {
     return <Error statusCode={errorCode} />
   }
 
   const [ship, setShip] = useState(initialShip)
+  backgroundPoll({ hook: setShip, args: { query: id }, fetchFunction: fetchData, responseKey: 'initialShip', timeout: 5 * 1000 })
 
-  useEffect(() => {
-    const interval = setInterval(async () => {
-      const { initialShip } = await fetchData({query: id})
-      setShip(initialShip)
-    }, 10 * 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  });
-  
   return (
     <>
       {JSON.stringify(ship, null, 2)}
     </>
   )
-};
+}
 
 Index.getInitialProps = fetchData
 

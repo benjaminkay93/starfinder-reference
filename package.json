@@ -3,7 +3,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "jest"
+    "test": "yarn test:lint && yarn test:coverage",
+    "test:coverage": "jest --coverage",
+    "test:lint": "eslint --ext .js,.jsx ./"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
@@ -14,6 +16,13 @@
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.1",
     "jest": "^24.9.0"
   }
 }

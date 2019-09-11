@@ -1,13 +1,13 @@
 const presets = [
-  "next/babel"
+  'next/babel'
 ]
 
 const plugins = [
   [
-    "styled-components",
+    'styled-components',
     {
-      "ssr": true,
-      "preprocess": false
+      ssr: true,
+      preprocess: false
     }
   ],
   [

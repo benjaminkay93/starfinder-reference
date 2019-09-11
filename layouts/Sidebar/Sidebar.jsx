@@ -15,15 +15,14 @@ const DeafultSidebar = styled.div`
     flex-grow: 1;
   }
 
-  > * > ${({sidebarOnRight}) => sidebarOnRight ? ':first-child' : ':last-child'} {
+  > * > ${({ sidebarOnRight }) => sidebarOnRight ? ':first-child' : ':last-child'} {
     flex-basis: 0;
     flex-grow: 999;
     min-width: calc(50% - 16px);
   }
 `
 
-
-const Sidebar = ({left, right, sidebarOnRight}) => (
+const Sidebar = ({ left, right, sidebarOnRight }) => (
   <DeafultSidebar sidebarOnRight={sidebarOnRight}>
     <div>
       <div>{left}</div>
