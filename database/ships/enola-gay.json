@@ -1,0 +1,161 @@
+{
+  "version": "1.0.1",
+  "hasCrew": 1,
+  "isSetDefaultCrewSkillValues": 0,
+  "isUseStrictRules": 1,
+  "shipName": "Enola Gay",
+  "shipConcept": "A smugglers vessel, well used to running between the various planets of the pact worlds smuggling anything from drugs, to weapons and medicines.",
+  "tierId": "1",
+  "frameId": "light-freighter",
+  "powerCoreIds": ["pulse-brown"],
+  "thrustersId": "s8",
+  "armourId": "mk-2",
+  "computerId": "basic-computer",
+  "crewQuartersId": "common",
+  "defensiveCountermeasuresId": "none",
+  "driftEngineId": "none",
+  "expansionBayIds": ["smuggler-compartment-20", "none", "none"],
+  "antiHackingSystemsId": "none",
+  "antiPersonnelWeaponId": "none",
+  "hasBiometricLocks": 0,
+  "computerCountermeasures": {
+      "alarm": false,
+      "fakeShell": false,
+      "feedback": false,
+      "firewall": false,
+      "lockout": false,
+      "shockGridId": "none",
+      "wipe": false
+  },
+  "hasSelfDestructSystem": 0,
+  "hasDataNet": 0,
+  "hasHiveJoining": 0,
+  "sensorsId": "budget-short-range",
+  "shieldsId": "basic-20",
+  "shieldsByPosition": {
+      "forward": 5,
+      "aft": 5,
+      "port": 5,
+      "starboard": 5
+  },
+  "weaponMounts": {
+      "forward": [{
+          "weaponId": "coilgun",
+          "weight": "light",
+          "templateWeight": "light",
+          "isFromTemplate": true,
+          "canBeLinked": false,
+          "isLinked": false
+      }, {
+          "weaponId": "none",
+          "weight": "light",
+          "templateWeight": "light",
+          "isFromTemplate": true,
+          "canBeLinked": false,
+          "isLinked": false
+      }],
+      "aft": [],
+      "port": [{
+          "weaponId": "flak-thrower",
+          "weight": "light",
+          "templateWeight": "light",
+          "isFromTemplate": true,
+          "canBeLinked": false,
+          "isLinked": false
+      }],
+      "starboard": [{
+          "weaponId": "flak-thrower",
+          "weight": "light",
+          "templateWeight": "light",
+          "isFromTemplate": true,
+          "canBeLinked": false,
+          "isLinked": false
+      }],
+      "turret": []
+  },
+  "crewSkills": {
+      "captain": {
+          "countOfficers": 0,
+          "hasRole": true,
+          "skills": {
+              "bluff": {
+                  "modifier": 0,
+                  "ranks": 0
+              },
+              "computers": {
+                  "modifier": 0,
+                  "ranks": 0
+              },
+              "diplomacy": {
+                  "modifier": 0,
+                  "ranks": 0
+              },
+              "engineering": {
+                  "modifier": 0,
+                  "ranks": 0
+              },
+              "gunnery": {
+                  "modifier": 0
+              },
+              "intimidate": {
+                  "modifier": 0,
+                  "ranks": 0
+              },
+              "piloting": {
+                  "modifier": 0,
+                  "ranks": 0
+              }
+          }
+      },
+      "engineer": {
+          "countOfficers": 1,
+          "countOfficerCrew": 0,
+          "hasRole": true,
+          "skills": {
+              "engineering": {
+                  "modifier": 0,
+                  "ranks": 0
+              }
+          }
+      },
+      "gunner": {
+          "countOfficers": 1,
+          "countOfficerCrew": 0,
+          "hasRole": true,
+          "skills": {
+              "gunnery": {
+                  "modifier": 0
+              }
+          }
+      },
+      "pilot": {
+          "countOfficers": 1,
+          "countOfficerCrew": 0,
+          "hasRole": true,
+          "skills": {
+              "computers": {
+                  "modifier": 0,
+                  "ranks": 0
+              },
+              "gunnery": {
+                  "modifier": 0
+              },
+              "piloting": {
+                  "modifier": 0,
+                  "ranks": 0
+              }
+          }
+      },
+      "scienceOfficer": {
+          "countOfficers": 1,
+          "countOfficerCrew": 0,
+          "hasRole": true,
+          "skills": {
+              "computers": {
+                  "modifier": 0,
+                  "ranks": 0
+              }
+          }
+      }
+  }
+}
