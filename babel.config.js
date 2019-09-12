@@ -17,6 +17,7 @@ const plugins = [
       alias: {
         utilities: './utilities',
         components: './components',
+        containers: './containers',
         layouts: './layouts'
       }
     }

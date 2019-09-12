@@ -102,12 +102,12 @@ const InnerCircle = styled.div`
 
 const Radar = () => (
   <>
-  <OuterCircle>
+  {/* <OuterCircle>
     <InnerCircle />
-  </OuterCircle>
-    {/* <Circle>
+  </OuterCircle> */}
+    <Circle>
       <RadarScan/>
-    </Circle> */}
+    </Circle>
 </>)
 
 export default Radar
