@@ -2,20 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledStack = styled.div`
-  --space: 1.5rem;
-
   > * {
     margin-top: 0;
     margin-bottom: 0;
   } 
 
-  > * + * {
-    margin-top: ${({ theme }) => theme.spacing.base};
+  ${({ theme, recursive }) => recursive
+    ? `* + * {margin-top: ${theme.spacing.base};}`
+    : `> * + * {margin-top: ${theme.spacing.base};}`
   }
 `
 
-const Stack = ({ children }) => (
-  <StyledStack>
+const Stack = ({ children, recursive }) => (
+  <StyledStack recursive={recursive}>
     {children.map((child, key) => <div key={key}>{child}</div>)}
   </StyledStack>
 )
